@@ -1,0 +1,1 @@
+a{color:var(--accent);padding:0 .125em;text-decoration:none;outline:0}a:focus,a:focus-visible{text-decoration:underline;filter:brightness(calc(100% + 20% * var(--dark)))}

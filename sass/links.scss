@@ -1,0 +1,12 @@
+a {
+	color: var(--accent);
+	padding: 0 0.125em;
+	text-decoration: none;
+	outline: none;
+
+	&:focus,
+	&:focus-visible {
+		text-decoration: underline;
+		filter: brightness(calc(100% + 20% * var(--dark)));
+	}
+}

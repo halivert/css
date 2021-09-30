@@ -1,0 +1,26 @@
+::selection {
+	background-color: var(--accent);
+	color: var(--background-color);
+}
+
+mark {
+	background-color: var(--accent);
+	color: var(--background-color);
+}
+
+details {
+	border: 1px solid var(--text);
+	border-radius: 4px;
+	padding: 1em;
+
+	summary {
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	&[open] {
+		summary {
+			margin-bottom: 1em;
+		}
+	}
+}

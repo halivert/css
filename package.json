@@ -1,0 +1,45 @@
+{
+	"name": "halivert.css",
+	"version": "0.0.0",
+	"description": "Classless css stylesheet for rapid prototyping",
+	"scripts": {
+		"yelp": "cleancss --help",
+		"build-sass": "sass sass/:css/",
+		"build-postcss": "postcss --use autoprefixer --map false --dir css/ css/*.css",
+		"build-min": "cleancss css/*.css --batch --batch-suffix .min",
+		"clean": "rm -rf css/*",
+		"watch": "$npm_execpath run build-sass --watch",
+		"build": "$npm_execpath run build-sass && $npm_execpath run build-postcss && $npm_execpath run build-min",
+		"deploy": "$npm_execpath run clean && $npm_execpath run build"
+	},
+	"keywords": [
+		"classless",
+		"css",
+		"sass",
+		"prototyping"
+	],
+	"homepage": "https://halivert.dev/css",
+	"license": "MIT",
+	"author": "Halí V. <hali@halivert.dev> (http://halivert.dev/)",
+	"repository": "github:halivert/css",
+	"bugs": {
+		"url": "https://github.com/halivert/css/issues",
+		"email": "bugs+css@halivert.dev"
+	},
+	"files": [
+		"css",
+		"sass"
+	],
+	"main": "halivert.scss",
+	"unpkg": "css/halivert.css",
+	"style": "css/halivert.min.css",
+	"devDependencies": {
+		"autoprefixer": "^10.3.5",
+		"clean-css-cli": "^5.4.1",
+		"postcss": "^8.3.8",
+		"postcss-cli": "^9.0.0",
+		"sass": "^1.42.1"
+	},
+	"type": "module",
+	"packageManager": "yarn@3.0.2"
+}

@@ -1,0 +1,36 @@
+table {
+	width: 100%;
+	border-collapse: collapse;
+
+	caption {
+		font-family: var(--title-font);
+		font-size: 1.1em;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	td,
+	th {
+		padding: 0.5em 1em;
+	}
+
+	tbody,
+	tfoot {
+		td,
+		th {
+			border: 1px solid var(--text);
+		}
+	}
+
+	tbody {
+		tr:nth-child(2n) {
+			background-color: var(--primary);
+		}
+	}
+
+	tfoot {
+		background-color: var(--background-secondary);
+	}
+}

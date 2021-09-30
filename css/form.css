@@ -1,0 +1,174 @@
+form {
+  margin: 0 auto;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  width: clamp(15ch, 95%, 60ch);
+}
+
+fieldset {
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: right;
+}
+fieldset > div {
+  text-align: left;
+  display: grid;
+}
+fieldset > div:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+fieldset > div > div {
+  display: flex;
+  flex-flow: column;
+}
+fieldset > div > div > label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+legend {
+  font-size: 1.1em;
+  padding: 0 0.5em;
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+button,
+textarea,
+select {
+  font-size: 0.9rem;
+  accent-color: var(--accent);
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 0.75em;
+  box-shadow: none;
+}
+
+::-moz-placeholder {
+  color: var(--background-secondary);
+}
+
+:-ms-input-placeholder {
+  color: var(--background-secondary);
+}
+
+::placeholder {
+  color: var(--background-secondary);
+}
+
+button,
+input[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: var(--background-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--text);
+  align-self: end;
+}
+
+button {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  background-color: transparent;
+}
+button::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--background-secondary);
+  z-index: -1;
+}
+button:focus::before, button:focus-visible::before {
+  opacity: 0.7;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  justify-self: start;
+}
+
+input[type=color] {
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+}
+
+meter {
+  width: 100%;
+  height: 100%;
+}
+
+progress {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  overflow: hidden;
+  border-radius: 99em;
+  width: 100%;
+  height: 1em;
+}
+progress::-moz-progress-bar {
+  background-color: var(--accent);
+}
+progress:indeterminate {
+  background-image: linear-gradient(to right, var(--accent) 30%, transparent 30%);
+  -webkit-animation: 2s infinite indeterminate linear;
+          animation: 2s infinite indeterminate linear;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 150% 150%;
+}
+progress:indeterminate::-moz-progress-bar {
+  background-color: transparent;
+}
+@media (prefers-reduced-motion) {
+  progress:indeterminate {
+    background-image: repeating-linear-gradient(45deg, var(--accent), var(--accent) 20px, transparent 20px, transparent 40px);
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
+@-webkit-keyframes indeterminate {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes indeterminate {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+@media (min-width: 768px) {
+  fieldset > div {
+    grid-template-columns: 2fr 5fr;
+    -moz-column-gap: 0.5em;
+         column-gap: 0.5em;
+  }
+
+  label {
+    justify-self: end;
+  }
+}
+
+/*# sourceMappingURL=form.css.map */

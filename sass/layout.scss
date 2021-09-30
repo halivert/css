@@ -1,0 +1,136 @@
+@use "mixins" as *;
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  display: grid;
+  grid-template:
+    "header" auto
+    "aside" auto
+    "main" 1fr
+    "footer" auto
+    / 100%;
+
+  background-color: var(--background-b);
+  color: var(--text);
+  --background-color: var(--primary);
+  --background-secondary: var(--background-b);
+}
+
+body > * {
+  grid-column: 2;
+}
+
+$areas: ("header", "aside", "main", "footer");
+
+@each $area in $areas {
+  #{$area} {
+    grid-area: #{$area};
+    background-color: var(--background-color);
+  }
+}
+
+#{$areas} {
+  padding: 1em;
+}
+
+header,
+aside {
+  --background-color: var(--primary);
+  --background-secondary: var(--background-b);
+}
+
+main {
+  --background-color: var(--background-b);
+  --background-secondary: var(--background);
+
+  max-width: 80ch;
+  margin: 0 auto;
+
+  > :not(--last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+footer {
+  --background-color: var(--background);
+  --background-secondary: var(--background-b);
+}
+
+blockquote {
+  background-color: var(--background);
+  padding: 0.75em 0.5em 0.75em 1em;
+  border-left: 2px solid var(--accent);
+}
+
+hr {
+  border: 1px solid var(--accent);
+  border-radius: 99em;
+  margin: 0.75em 0;
+
+  &::before {
+    color: var(--accent);
+    content: "//";
+    letter-spacing: 2px;
+    border-radius: 99em;
+    position: absolute;
+    padding: 0 0.5em;
+    left: 50%;
+    transform: translate(50%, -50%);
+    background-color: var(--background-color);
+  }
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  padding: 0.5em;
+
+  > ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    gap: 0.5em;
+
+    a {
+      font-size: 1.2em;
+      border: 1px solid var(--text);
+      padding: 0.25em 0.75em;
+      border-radius: 99em;
+
+      &:focus,
+      &:focus-visible {
+        background-color: var(--background);
+        filter: none;
+      }
+    }
+  }
+}
+
+menu,
+aside {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 0.25em;
+    flex-flow: row wrap;
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
+}
+
+@include desktop {
+  body {
+    grid-template:
+      "header header" auto
+      "aside main" 1fr
+      "aside footer" auto
+      / auto 1fr;
+  }
+}

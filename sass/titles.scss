@@ -1,0 +1,15 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--title-font);
+	font-weight: bold;
+}
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: 1rem + (2 - ($i * 0.25));
+	}
+}

@@ -1,0 +1,1 @@
+table{width:100%;border-collapse:collapse}table caption{font-family:var(--title-font);font-size:1.1em}table th{font-weight:700}table td,table th{padding:.5em 1em}table tbody td,table tbody th,table tfoot td,table tfoot th{border:1px solid var(--text)}table tbody tr:nth-child(2n){background-color:var(--primary)}table tfoot{background-color:var(--background-secondary)}

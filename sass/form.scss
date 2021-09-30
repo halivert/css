@@ -1,0 +1,173 @@
+@use "mixins" as *;
+
+form {
+	margin: 0 auto;
+	display: flex;
+	gap: 1em;
+	flex-direction: column;
+	width: clamp(15ch, 95%, 60ch);
+}
+
+fieldset {
+	border: 2px solid var(--text);
+	border-radius: 8px;
+	padding: 1rem;
+	text-align: right;
+
+	> div {
+		text-align: left;
+		display: grid;
+
+		&:not(:last-child) {
+			margin-bottom: 0.5em;
+		}
+
+		> div {
+			display: flex;
+			flex-flow: column;
+
+			> label {
+				font-size: 1rem;
+				font-weight: 400;
+			}
+		}
+	}
+}
+
+legend {
+	font-size: 1.1em;
+	padding: 0 0.5em;
+}
+
+label {
+	font-weight: 600;
+}
+
+input,
+button,
+textarea,
+select {
+	font-size: 0.9rem;
+	accent-color: var(--accent);
+	border: none;
+	border-radius: 4px;
+	padding: 0.5em 0.75em;
+	box-shadow: none;
+}
+
+::placeholder {
+	color: var(--background-secondary);
+}
+
+button,
+input[type="submit"] {
+	appearance: none;
+	background-color: var(--background-secondary);
+	font-size: 1rem;
+	cursor: pointer;
+	color: var(--text);
+	align-self: end;
+}
+
+button {
+	overflow: hidden;
+	position: relative;
+	isolation: isolate;
+	background-color: transparent;
+
+	&::before {
+		position: absolute;
+		content: "";
+		inset: 0;
+		background-color: var(--background-secondary);
+		z-index: -1;
+	}
+
+	&:focus::before,
+	&:focus-visible::before {
+		opacity: 0.7;
+	}
+}
+
+textarea {
+	resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	justify-self: start;
+}
+
+input[type="color"] {
+	background-color: transparent;
+	padding: 0;
+	width: 100%;
+}
+
+meter {
+	width: 100%;
+	height: 100%;
+}
+
+progress {
+	appearance: none;
+	display: block;
+	overflow: hidden;
+	border-radius: 99em;
+	width: 100%;
+	height: 1em;
+
+	&::-moz-progress-bar {
+		background-color: var(--accent);
+	}
+
+	&:indeterminate {
+		&::-moz-progress-bar {
+			background-color: transparent;
+		}
+
+		background-image: linear-gradient(
+			to right,
+			var(--accent) 30%,
+			transparent 30%
+		);
+
+		animation: 2s infinite indeterminate linear;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: 150% 150%;
+
+		@include reducedMotion {
+			background-image: repeating-linear-gradient(
+				45deg,
+				var(--accent),
+				var(--accent) 20px,
+				transparent 20px,
+				transparent 40px
+			);
+			animation: none;
+		}
+	}
+}
+
+@keyframes indeterminate {
+	from {
+		background-position: 200% 0;
+	}
+	to {
+		background-position: -200% 0;
+	}
+}
+
+@include desktop {
+	fieldset {
+		> div {
+			grid-template-columns: 2fr 5fr;
+			column-gap: 0.5em;
+		}
+	}
+
+	label {
+		justify-self: end;
+	}
+}
