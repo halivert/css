@@ -16,4 +16,18 @@ menu {
   list-style-position: inside;
 }
 
+menu ul,
+aside ul {
+  list-style: none;
+  display: flex;
+  gap: 0.25em;
+  flex-flow: row wrap;
+}
+@media (min-width: 768px) {
+  menu ul,
+aside ul {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=lists.css.map */

@@ -1,5 +1,7 @@
 @use "mixins" as *;
 
+$areas: ("header", "aside", "main", "footer");
+
 body {
   min-height: 100vh;
   width: 100%;
@@ -14,15 +16,11 @@ body {
 
   background-color: var(--background-b);
   color: var(--text);
-  --background-color: var(--primary);
-  --background-secondary: var(--background-b);
 }
 
 body > * {
   grid-column: 2;
 }
-
-$areas: ("header", "aside", "main", "footer");
 
 @each $area in $areas {
   #{$area} {
@@ -35,16 +33,7 @@ $areas: ("header", "aside", "main", "footer");
   padding: 1em;
 }
 
-header,
-aside {
-  --background-color: var(--primary);
-  --background-secondary: var(--background-b);
-}
-
 main {
-  --background-color: var(--background-b);
-  --background-secondary: var(--background);
-
   max-width: 80ch;
   margin: 0 auto;
 
@@ -53,15 +42,14 @@ main {
   }
 }
 
-footer {
-  --background-color: var(--background);
-  --background-secondary: var(--background-b);
+blockquote {
+  padding: 0.75em 0.5em 0.75em 1em;
+  background-color: var(--background);
+  border-left: 2px solid var(--accent);
 }
 
-blockquote {
-  background-color: var(--background);
-  padding: 0.75em 0.5em 0.75em 1em;
-  border-left: 2px solid var(--accent);
+header {
+  text-align: center;
 }
 
 hr {
@@ -80,10 +68,6 @@ hr {
     transform: translate(50%, -50%);
     background-color: var(--background-color);
   }
-}
-
-header {
-  text-align: center;
 }
 
 nav {
@@ -107,20 +91,6 @@ nav {
         background-color: var(--background);
         filter: none;
       }
-    }
-  }
-}
-
-menu,
-aside {
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 0.25em;
-    flex-flow: row wrap;
-
-    @include desktop {
-      flex-direction: column;
     }
   }
 }

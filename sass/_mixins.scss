@@ -1,29 +1,29 @@
 @mixin desktop {
 	@media (min-width: 768px) {
-		@content
+		@content;
 	}
 }
 
 @mixin mobile {
 	@media (max-width: 767px) {
-		@content
+		@content;
 	}
 }
 
 @mixin dark {
 	@media (prefers-color-scheme: dark) {
-		@content
+		@content;
 	}
 }
 
 @mixin light {
 	@media (prefers-color-scheme: light) {
-		@content
+		@content;
 	}
 }
 
 @mixin reducedMotion {
 	@media (prefers-reduced-motion) {
-		@content
+		@content;
 	}
 }

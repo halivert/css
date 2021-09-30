@@ -1,11 +1,14 @@
 @use "mixins" as *;
 
 form {
+	padding: 1em;
 	margin: 0 auto;
 	display: flex;
 	gap: 1em;
 	flex-direction: column;
 	width: clamp(15ch, 95%, 60ch);
+	background-color: var(--background-color);
+	color: var(--text);
 }
 
 fieldset {

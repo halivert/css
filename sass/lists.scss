@@ -1,3 +1,5 @@
+@use "mixins" as *;
+
 dt {
   font-weight: bold;
 }
@@ -14,4 +16,18 @@ ul,
 ol,
 menu {
   list-style-position: inside;
+}
+
+menu,
+aside {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 0.25em;
+    flex-flow: row wrap;
+
+    @include desktop {
+      flex-direction: column;
+    }
+  }
 }

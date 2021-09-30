@@ -1,7 +1,5 @@
 @use "mixins" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&family=Ubuntu+Mono&display=swap");
-
 *,
 ::before,
 ::after {
@@ -12,7 +10,7 @@
 
 :root {
 	--main-font: "Raleway", sans-serif;
-	--title-font: "Montserrat", sans-serif;
+	--title-font: "Montserrat", serif;
 	--monospace-font: "Iosevka", "Ubuntu Mono", monospace;
 
 	--dark: -1;
@@ -30,6 +28,25 @@
 		--primary: hsl(216, 41%, 18%);
 		--background-b: hsl(206, 47%, 9%);
 	}
+
+	--background-color: var(--primary);
+	--background-secondary: var(--background-b);
+}
+
+header,
+aside {
+	--background-color: var(--primary);
+	--background-secondary: var(--background-b);
+}
+
+main {
+	--background-color: var(--background-b);
+	--background-secondary: var(--background);
+}
+
+footer {
+	--background-color: var(--background);
+	--background-secondary: var(--background-b);
 }
 
 html {

@@ -30,8 +30,8 @@
 		"css",
 		"sass"
 	],
-	"main": "halivert.scss",
-	"unpkg": "css/halivert.css",
+	"main": "css/halivert.css",
+	"unpkg": "css/halivert.min.css",
 	"style": "css/halivert.min.css",
 	"devDependencies": {
 		"autoprefixer": "^10.3.5",

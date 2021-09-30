@@ -6,8 +6,6 @@ body {
   grid-template: "header" auto "aside" auto "main" 1fr "footer" auto/100%;
   background-color: var(--background-b);
   color: var(--text);
-  --background-color: var(--primary);
-  --background-secondary: var(--background-b);
 }
 
 body > * {
@@ -38,15 +36,7 @@ header, aside, main, footer {
   padding: 1em;
 }
 
-header,
-aside {
-  --background-color: var(--primary);
-  --background-secondary: var(--background-b);
-}
-
 main {
-  --background-color: var(--background-b);
-  --background-secondary: var(--background);
   max-width: 80ch;
   margin: 0 auto;
 }
@@ -54,15 +44,14 @@ main > :not(--last-child) {
   margin-bottom: 0.5em;
 }
 
-footer {
-  --background-color: var(--background);
-  --background-secondary: var(--background-b);
+blockquote {
+  padding: 0.75em 0.5em 0.75em 1em;
+  background-color: var(--background);
+  border-left: 2px solid var(--accent);
 }
 
-blockquote {
-  background-color: var(--background);
-  padding: 0.75em 0.5em 0.75em 1em;
-  border-left: 2px solid var(--accent);
+header {
+  text-align: center;
 }
 
 hr {
@@ -80,10 +69,6 @@ hr::before {
   left: 50%;
   transform: translate(50%, -50%);
   background-color: var(--background-color);
-}
-
-header {
-  text-align: center;
 }
 
 nav {
@@ -105,20 +90,6 @@ nav > ul a {
 nav > ul a:focus, nav > ul a:focus-visible {
   background-color: var(--background);
   filter: none;
-}
-
-menu ul,
-aside ul {
-  list-style: none;
-  display: flex;
-  gap: 0.25em;
-  flex-flow: row wrap;
-}
-@media (min-width: 768px) {
-  menu ul,
-aside ul {
-    flex-direction: column;
-  }
 }
 
 @media (min-width: 768px) {
