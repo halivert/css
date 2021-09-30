@@ -102,6 +102,10 @@ header, aside, main, footer {
   padding: 1em;
 }
 
+footer {
+  text-align: center;
+}
+
 main {
   max-width: 80ch;
   margin: 0 auto;
@@ -295,6 +299,12 @@ kbd {
   border: 1px solid var(--text);
   border-radius: 2px;
   padding: 0 0.125em;
+}
+
+pre {
+  background-color: var(--background-secondary);
+  padding: 1em;
+  overflow: auto;
 }
 
 ::-moz-selection {

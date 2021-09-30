@@ -26,3 +26,9 @@ kbd {
 	border-radius: 2px;
 	padding: 0 0.125em;
 }
+
+pre {
+	background-color: var(--background-secondary);
+	padding: 1em;
+	overflow: auto;
+}
