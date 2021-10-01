@@ -41,7 +41,8 @@ footer {
 }
 
 main {
-  max-width: 80ch;
+  width: 80ch;
+  max-width: 100%;
   margin: 0 auto;
 }
 main > :not(--last-child) {
