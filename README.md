@@ -6,7 +6,7 @@
 - Modular.
 - Easy to use.
 - Customizable.
-- Less than 7KB.
+- Around 7KB.
 
 ## Usage
 
