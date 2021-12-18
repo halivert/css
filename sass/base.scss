@@ -1,4 +1,5 @@
 @use "mixins" as *;
+@use "colors" as *;
 
 *,
 ::before,
@@ -13,24 +14,24 @@
 	--title-font: "Montserrat", serif;
 	--monospace-font: "Iosevka", "Ubuntu Mono", monospace;
 
-	--dark: -1;
-	--text: hsl(240, 23%, 5%);
-	--accent: hsl(322, 42%, 36%);
-	--background: hsl(249, 21%, 83%);
-	--primary: hsl(216, 41%, 88%);
-	--background-b: hsl(206, 47%, 89%);
-
-	@include dark {
-		--dark: 1;
-		--background: hsl(240, 23%, 5%);
-		--accent: hsl(322, 42%, 56%);
-		--text: hsl(249, 21%, 83%);
-		--primary: hsl(216, 41%, 18%);
-		--background-b: hsl(206, 47%, 9%);
-	}
-
 	--background-color: var(--primary);
 	--background-secondary: var(--background-b);
+
+	&:not(.light):not(.dark) {
+		@include light-mode;
+
+		@include dark {
+			@include dark-mode;
+		}
+	}
+
+	&.light {
+		@include light-mode;
+	}
+
+	&.dark {
+		@include dark-mode;
+	}
 }
 
 header,
