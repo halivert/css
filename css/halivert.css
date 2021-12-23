@@ -129,8 +129,11 @@ main {
   width: 100%;
   margin: 0 auto;
 }
-main > :not(--last-child) {
+main > :not(:last-child) {
   margin-bottom: 0.5em;
+}
+main section:not(:last-child) {
+  margin-bottom: 1em;
 }
 
 blockquote {
@@ -223,6 +226,7 @@ h5,
 h6 {
   font-family: var(--title-font);
   font-weight: bold;
+  margin-bottom: 0.25em;
 }
 
 h1 {
@@ -281,6 +285,10 @@ aside ul {
   }
 }
 
+ul > li > ul {
+  margin-left: 1em;
+}
+
 a {
   color: var(--accent);
   padding: 0 0.125em;
@@ -324,6 +332,7 @@ pre {
   background-color: var(--background-secondary);
   padding: 1em;
   overflow: auto;
+  margin: 0.25em 0;
 }
 
 ::-moz-selection {

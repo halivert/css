@@ -42,8 +42,12 @@ main {
   width: 100%;
   margin: 0 auto;
 
-  > :not(--last-child) {
+  > :not(:last-child) {
     margin-bottom: 0.5em;
+  }
+
+  section:not(:last-child) {
+    margin-bottom: 1em;
   }
 }
 

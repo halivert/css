@@ -6,6 +6,7 @@ h5,
 h6 {
 	font-family: var(--title-font);
 	font-weight: bold;
+	margin-bottom: 0.25em;
 }
 
 @for $i from 1 through 6 {
