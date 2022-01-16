@@ -14,8 +14,8 @@
 	--title-font: "Montserrat", serif;
 	--monospace-font: "Iosevka", "Ubuntu Mono", monospace;
 
-	--background-color: var(--primary);
-	--background-secondary: var(--background-b);
+	--bg-color: var(--primary);
+	--bg-color-b: var(--bg-b);
 
 	&:not(.light):not(.dark) {
 		@include light-mode;
@@ -36,26 +36,24 @@
 
 header,
 aside {
-	--background-color: var(--primary);
-	--background-secondary: var(--background-b);
+	--bg-color: var(--primary);
+	--bg-color-b: var(--bg-b);
 }
 
 main {
-	--background-color: var(--background-b);
-	--background-secondary: var(--background);
+	--bg-color: var(--bg-b);
+	--bg-color-b: var(--bg);
 }
 
 footer {
-	--background-color: var(--background);
-	--background-secondary: var(--background-b);
+	--bg-color: var(--bg);
+	--bg-color-b: var(--bg-b);
 }
 
 html {
 	text-rendering: optimizeLegibility;
 	line-height: 1.5;
-	font-size: var(--font-size, 16px);
-	font-family: var(--main-font);
-	font-weight: 400;
+	font: 400 var(--font-size, 16px) var(--main-font);
 }
 
 [title] {

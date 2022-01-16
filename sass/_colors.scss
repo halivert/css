@@ -2,16 +2,16 @@
 	--dark: -1;
 	--text: hsl(240, 23%, 5%);
 	--accent: hsl(322, 42%, 36%);
-	--background: hsl(249, 21%, 83%);
+	--bg: hsl(249, 21%, 83%);
 	--primary: hsl(216, 41%, 88%);
-	--background-b: hsl(206, 47%, 89%);
+	--bg-b: hsl(206, 47%, 89%);
 }
 
 @mixin dark-mode {
 	--dark: 1;
-	--background: hsl(240, 23%, 5%);
+	--bg: hsl(240, 23%, 5%);
 	--accent: hsl(322, 42%, 56%);
 	--text: hsl(249, 21%, 83%);
 	--primary: hsl(216, 41%, 18%);
-	--background-b: hsl(206, 47%, 9%);
+	--bg-b: hsl(206, 47%, 9%);
 }

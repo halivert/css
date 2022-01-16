@@ -3,12 +3,11 @@ table {
 	border-collapse: collapse;
 
 	caption {
-		font-family: var(--title-font);
-		font-size: 1.1em;
+		font: 1.1rem var(--title-font);
 	}
 
 	th {
-		font-weight: bold;
+		font-weight: 700;
 	}
 
 	td,
@@ -26,11 +25,11 @@ table {
 
 	tbody {
 		tr:nth-child(2n) {
-			background-color: var(--primary);
+			background: var(--primary);
 		}
 	}
 
 	tfoot {
-		background-color: var(--background-secondary);
+		background: var(--bg-color-b);
 	}
 }

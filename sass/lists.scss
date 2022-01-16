@@ -1,7 +1,7 @@
 @use "mixins" as *;
 
 dt {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 dd {
@@ -27,7 +27,7 @@ aside {
     flex-flow: row wrap;
 
     @include desktop {
-      flex-direction: column;
+      flex-flow: column;
     }
   }
 }

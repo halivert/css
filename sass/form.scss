@@ -1,13 +1,13 @@
 @use "mixins" as *;
 
 form {
-	padding: 1em;
-	margin: 0 auto;
+	padding: 1rem;
 	display: flex;
+	margin: 0 auto;
 	gap: 1em;
-	flex-direction: column;
+	flex-flow: column;
 	width: clamp(15ch, 95%, 60ch);
-	background-color: var(--background-color);
+	background: var(--bg-color);
 	color: var(--text);
 }
 
@@ -25,12 +25,11 @@ fieldset {
 			margin-bottom: 0.5em;
 		}
 
-		> div {
+		div {
 			display: flex;
 			flex-flow: column;
 
-			> label {
-				font-size: 1rem;
+			label {
 				font-weight: 400;
 			}
 		}
@@ -59,30 +58,34 @@ select {
 }
 
 ::placeholder {
-	color: var(--background-secondary);
+	color: var(--bg-color-b);
 }
 
-button,
+button[type="submit"],
 input[type="submit"] {
 	appearance: none;
-	background-color: var(--background-secondary);
+	background: var(--bg-color-b);
 	font-size: 1rem;
 	cursor: pointer;
 	color: var(--text);
 	align-self: end;
 }
 
-button {
+button,
+progress {
 	overflow: hidden;
+}
+
+button {
 	position: relative;
 	isolation: isolate;
-	background-color: transparent;
+	background: transparent;
 
 	&::before {
 		position: absolute;
 		content: "";
 		inset: 0;
-		background-color: var(--background-secondary);
+		background: var(--bg-color-b);
 		z-index: -1;
 	}
 
@@ -101,32 +104,34 @@ input[type="radio"] {
 	justify-self: start;
 }
 
-input[type="color"] {
-	background-color: transparent;
-	padding: 0;
+input[type="color"],
+meter,
+progress {
 	width: 100%;
 }
 
+input[type="color"] {
+	background: transparent;
+	padding: 0;
+}
+
 meter {
-	width: 100%;
 	height: 100%;
 }
 
 progress {
 	appearance: none;
 	display: block;
-	overflow: hidden;
 	border-radius: 99em;
-	width: 100%;
 	height: 1em;
 
 	&::-moz-progress-bar {
-		background-color: var(--accent);
+		background: var(--accent);
 	}
 
 	&:indeterminate {
 		&::-moz-progress-bar {
-			background-color: transparent;
+			background: transparent;
 		}
 
 		background-image: linear-gradient(
@@ -136,8 +141,7 @@ progress {
 		);
 
 		animation: 2s infinite indeterminate linear;
-		background-position: top left;
-		background-repeat: no-repeat;
+		background: 150% 150% top left no-repeat;
 		background-size: 150% 150%;
 
 		@include reducedMotion {

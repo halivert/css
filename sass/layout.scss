@@ -14,7 +14,7 @@ body {
     "footer" auto
     / 100%;
 
-  background-color: var(--background-b);
+  background: var(--bg-b);
   color: var(--text);
 }
 
@@ -25,7 +25,7 @@ body > * {
 @each $area in $areas {
   #{$area} {
     grid-area: #{$area};
-    background-color: var(--background-color);
+    background: var(--bg-color);
   }
 }
 
@@ -33,7 +33,8 @@ body > * {
   padding: 1em;
 }
 
-footer {
+footer,
+header {
   text-align: center;
 }
 
@@ -53,12 +54,8 @@ main {
 
 blockquote {
   padding: 0.75em 0.5em 0.75em 1em;
-  background-color: var(--background);
+  background: var(--bg);
   border-left: 2px solid var(--accent);
-}
-
-header {
-  text-align: center;
 }
 
 hr {
@@ -75,7 +72,7 @@ hr {
     padding: 0 0.5em;
     left: 50%;
     transform: translate(50%, -50%);
-    background-color: var(--background-color);
+    background: var(--bg-color);
   }
 }
 
@@ -97,7 +94,7 @@ nav {
 
       &:focus,
       &:focus-visible {
-        background-color: var(--background);
+        background: var(--bg);
         filter: none;
       }
     }
