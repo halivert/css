@@ -3,11 +3,10 @@ table {
   border-collapse: collapse;
 }
 table caption {
-  font-family: var(--title-font);
-  font-size: 1.1em;
+  font: 1.1rem var(--title-font);
 }
 table th {
-  font-weight: bold;
+  font-weight: 700;
 }
 table td,
 table th {
@@ -20,10 +19,10 @@ table tfoot th {
   border: 1px solid var(--text);
 }
 table tbody tr:nth-child(2n) {
-  background-color: var(--primary);
+  background: var(--primary);
 }
 table tfoot {
-  background-color: var(--background-secondary);
+  background: var(--bg-color-b);
 }
 
 /*# sourceMappingURL=tables.css.map */

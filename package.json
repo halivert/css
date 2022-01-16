@@ -3,7 +3,6 @@
 	"version": "0.4.0",
 	"description": "Classless css stylesheet for rapid prototyping",
 	"scripts": {
-		"yelp": "cleancss --help",
 		"build-sass": "sass sass/:css/",
 		"build-postcss": "postcss --use autoprefixer --map false --dir css/ css/*.css",
 		"build-min": "cleancss css/*.css --batch --batch-suffix .min",

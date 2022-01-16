@@ -1,16 +1,12 @@
 ::-moz-selection {
-  background-color: var(--accent);
-  color: var(--background-color);
+  background: var(--accent);
+  color: var(--bg-color);
 }
 
-::selection {
-  background-color: var(--accent);
-  color: var(--background-color);
-}
-
+::selection,
 mark {
-  background-color: var(--accent);
-  color: var(--background-color);
+  background: var(--accent);
+  color: var(--bg-color);
 }
 
 details {
@@ -19,11 +15,11 @@ details {
   padding: 1em;
 }
 details summary {
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
 }
 details[open] summary {
-  margin-bottom: 1em;
+  margin: 0 0 1em 0;
 }
 
 /*# sourceMappingURL=text.css.map */

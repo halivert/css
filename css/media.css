@@ -1,16 +1,18 @@
-figure {
+figure,
+figure figcaption {
   position: relative;
   overflow: hidden;
+}
+
+figure {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
 }
 figure figcaption {
-  position: relative;
-  overflow: hidden;
-  font-weight: bold;
+  font-weight: 700;
   z-index: 0;
   padding: 0.25em 0.75em;
 }
@@ -19,12 +21,12 @@ figure figcaption::before {
   inset: 0;
   position: absolute;
   z-index: -1;
-  background-color: var(--background);
+  background: var(--bg);
   opacity: 0.7;
 }
 
 audio {
-  background-color: var(--background-color);
+  background: var(--bg-color);
 }
 
 /*# sourceMappingURL=media.css.map */

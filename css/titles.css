@@ -4,9 +4,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--title-font);
-  font-weight: bold;
-  margin-bottom: 0.25em;
+  font: 700 1rem var(--title-font);
+  margin: 0 0 0.25em 0;
 }
 
 h1 {
