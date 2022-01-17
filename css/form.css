@@ -78,6 +78,7 @@ input[type=submit] {
 button,
 progress {
   overflow: hidden;
+  color: var(--text);
 }
 
 button {
