@@ -33,12 +33,12 @@
 	"unpkg": "css/halivert.min.css",
 	"style": "css/halivert.min.css",
 	"devDependencies": {
-		"autoprefixer": "^10.3.5",
-		"clean-css-cli": "^5.4.1",
-		"postcss": "^8.3.8",
-		"postcss-cli": "^9.0.0",
-		"sass": "^1.42.1"
+		"autoprefixer": "10.3.5",
+		"clean-css-cli": "5.4.1",
+		"postcss": "8.3.8",
+		"postcss-cli": "9.0.0",
+		"sass": "1.42.1"
 	},
 	"type": "module",
-	"packageManager": "yarn@3.0.2"
+	"packageManager": "yarn@3.1.1"
 }
