@@ -1,15 +1,11 @@
-body {
+body,
+.body {
   min-height: 100vh;
   width: 100%;
-  overflow-y: scroll;
   display: grid;
   grid-template: "header" auto "aside" auto "main" 1fr "footer" auto/100%;
   background: var(--bg-b);
   color: var(--text);
-}
-
-body > * {
-  grid-column: 2;
 }
 
 header {
@@ -98,8 +94,13 @@ nav > ul a:focus, nav > ul a:focus-visible {
 }
 
 @media (min-width: 768px) {
-  body {
+  body,
+.body {
     grid-template: "header header" auto "aside main" 1fr "aside footer" auto/auto 1fr;
+  }
+
+  .body {
+    grid-column: 1/3;
   }
 }
 

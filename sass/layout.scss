@@ -2,10 +2,10 @@
 
 $areas: ("header", "aside", "main", "footer");
 
-body {
+body,
+.body {
   min-height: 100vh;
   width: 100%;
-  overflow-y: scroll;
   display: grid;
   grid-template:
     "header" auto
@@ -16,10 +16,6 @@ body {
 
   background: var(--bg-b);
   color: var(--text);
-}
-
-body > * {
-  grid-column: 2;
 }
 
 @each $area in $areas {
@@ -102,11 +98,16 @@ nav {
 }
 
 @include desktop {
-  body {
+  body,
+  .body {
     grid-template:
       "header header" auto
       "aside main" 1fr
       "aside footer" auto
       / auto 1fr;
+  }
+
+  .body {
+    grid-column: 1 / 3;
   }
 }

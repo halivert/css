@@ -1,5 +1,6 @@
 node_modules/
 /index.html
+docs/test.html
 
 .pnp.*
 .yarn/*
