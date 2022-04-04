@@ -1,6 +1,6 @@
 {
 	"name": "halivert.css",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"description": "Classless css stylesheet for rapid prototyping",
 	"scripts": {
 		"build-sass": "sass sass/:css/",
