@@ -442,10 +442,6 @@ select {
   color: var(--bg-color-b);
 }
 
-:-ms-input-placeholder {
-  color: var(--bg-color-b);
-}
-
 ::placeholder {
   color: var(--bg-color-b);
 }
@@ -521,8 +517,7 @@ progress::-moz-progress-bar {
 }
 progress:indeterminate {
   background-image: linear-gradient(to right, var(--accent) 30%, transparent 30%);
-  -webkit-animation: 2s infinite indeterminate linear;
-          animation: 2s infinite indeterminate linear;
+  animation: 2s infinite indeterminate linear;
   background: 150% 150% top left no-repeat;
   background-size: 150% 150%;
 }
@@ -532,17 +527,7 @@ progress:indeterminate::-moz-progress-bar {
 @media (prefers-reduced-motion) {
   progress:indeterminate {
     background-image: repeating-linear-gradient(45deg, var(--accent), var(--accent) 20px, transparent 20px, transparent 40px);
-    -webkit-animation: none;
-            animation: none;
-  }
-}
-
-@-webkit-keyframes indeterminate {
-  from {
-    background-position: 200% 0;
-  }
-  to {
-    background-position: -200% 0;
+    animation: none;
   }
 }
 
